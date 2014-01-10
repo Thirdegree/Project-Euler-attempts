@@ -9,4 +9,6 @@ isPrime n = go 2
 
 primes = 2:filter isPrime [3,5..]
 
+
+
 main = print $ sum $ takeWhile (<2000000) primes
