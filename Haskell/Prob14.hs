@@ -1,10 +1,17 @@
+import Data.List
 
-collatz :: Integer -> [Integer]
+--this works
+
+collatz :: Integer -> Integer
 collatz n 
-	| n == 1 = [1]
-	| even n = n:collatz (n `quot` 2)
-	| otherwise = n:collatz (3*n+1)
+	| n == 1 = 1
+	| even n = 1+ collatz (n `div` 2)
+	| otherwise = 1 + collatz (3*n+1)
 
-chains = [collatz x | x<-[1..]]
-
-main = print $ chains!!654547654
+main = do
+	let lengths = map collatz [1..1000000]
+	let m = maximum lengths
+	let ind = elemIndex m lengths
+	case ind of
+		Just n -> print (n+1)
+		Nothing -> print "Nothing"
