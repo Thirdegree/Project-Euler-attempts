@@ -1,0 +1,3 @@
+--No thank you. This looks to be just straigt up iritating. Too dependent on 
+--things that depend on region. (i.e. one hundred and fourty-two vs one hundred fourty-two)
+--I'll skip this one. Maybe do it tomorrow in java I.
